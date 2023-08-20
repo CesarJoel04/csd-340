@@ -27,16 +27,20 @@ address {
     text-align: center;
 }
 
-.address-link {
+a:link {
     font-size: 1.25em;
     font-weight: bold;
     color: #4F3674;
     text-decoration: none;
 }
 
-.address-link:hover {
+a:hover {
     text-decoration: underline;
     background-color: #D6A800;
+}
+
+a:visited {
+  color: #0080ff;
 }
 
 .sentence {
@@ -46,3 +50,4 @@ address {
 .intro {
     text-indent: 2em;
 }
+
