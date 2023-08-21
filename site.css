@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Inter', sans-serif;
 }
 
@@ -9,21 +9,21 @@ body{
 }
 
 h1, h2, h3, h4 {
-    background-color: #0072b5;
+    background-color: #0b4373;
     color: #ffffff;
-    border: 1px solid #D6A800;
+    border: 3px solid #EB7F00;
     padding: 10px;
 }
 
 a {
-    color: #ffffff;
+    color: #225378;
     text-decoration: none;
 }
 
 a:hover {
-    color: #F0F8FF;
+    color: #eb7f00;
+	padding: 10px;
 }
-
-a:visited {
-    color: #4C5E70;
+ul.no-bullets {
+	text-indent: 3em;
 }
