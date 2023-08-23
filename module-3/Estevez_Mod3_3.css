@@ -1,0 +1,58 @@
+body{
+	
+}
+h1 {
+	text-align: center;
+}
+
+.side-by-side-left, 
+.side-by-side-right{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+h3{
+	font-weight: 500;
+}
+
+li{
+	font-weight: 300;
+}
+
+.side-by-side-left {
+	border: 1px solid red;
+	border-radius: 15px;
+}
+
+ol{
+	padding: 10px;
+	list-style-position: inside;
+}
+
+ul{
+	padding: 10px;
+	list-style-type: upper-roman;
+}
+
+.side-by-side-right{
+	border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside upper-roman;
+}
+
+.last-div{
+	width: 100%;
+	margin-top: 60%;
+	float: right;
+	margin-bottom: 20px;
+}
+
+.back-link{
+	float: right;
+}
+
+a:hover{
+	text-decoration: underline;
+}
