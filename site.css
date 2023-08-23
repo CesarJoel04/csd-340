@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -26,4 +27,34 @@ a:hover {
 }
 ul.no-bullets {
 	text-indent: 3em;
+=======
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;  
+}
+
+h1, h2, h3, h4 {
+    background-color: #0b4373;
+    color: #ffffff;
+    border: 3px solid #EB7F00;
+    padding: 10px;
+}
+
+a {
+    color: #225378;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #eb7f00;
+	padding: 10px;
+}
+ul.no-bullets {
+	text-indent: 3em;
+>>>>>>> f36ebcee3480d2f22c3f55900b56420acc1e0bce
 }
