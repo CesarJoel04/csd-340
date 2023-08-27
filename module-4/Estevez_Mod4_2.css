@@ -1,0 +1,47 @@
+body {
+   
+    font-family: Arial, sans-serif;
+	
+}
+
+#container{
+		text-align: center;
+}
+
+.image-gallery{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	margin-top: 10%;
+	
+   }
+
+.grid-item{
+	border: 1px solid #fc9904;
+	text-align: center;
+	padding-left: 125px;
+	padding-right: 125px;
+	
+}
+
+
+
+h1, h3, figure{
+	text-align: center;
+}
+
+
+figcaption{
+	font-style: italic;
+    font-size: 0.75em;
+}
+
+h1, h3, figcaption {   
+	color: rgba(252, 153, 4, 1);
+}
+
+.back-link{
+	margin-top: 40px;
+	float: right;
+	margin-right: 10%;
+	
+}
