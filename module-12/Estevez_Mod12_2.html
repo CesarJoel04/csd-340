@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Cesar Estevez-Peralta">
+    <meta name="description" content="Module 12.2 Assignment">
+    <meta name="keywords" content="CSD 340, HTML, CSS, 12.2 Assignment">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+	<link rel="stylesheet" href="CSS_Mod12_2.css">
+
+    </head>
+  <body>
+
+    <div id="container">
+       <h1>Assignment 12.2: JavaScript - Part 4</h1>
+		<div class="side-by-side-left">
+			<h3>Top 10 Favorite Books</h3>
+
+			<button onclick="sortAscending()">Top to Bottom</button>
+			<button onclick="sortDescending()">Bottom to Top</button>
+
+			 <ol id="bookList">
+				<li data-number="1">A Wrinkle in Time</li>
+				<li data-number="2">The Godfather</li>
+				<li data-number="3">Papillion</li>
+				<li data-number="4">The Art of Deception</li>
+				<li data-number="5">The Hobbit</li>
+				<li data-number="6">Do Android Dream of Electric Sheep?</li>
+				<li data-number="7">Dune</li>
+				<li data-number="8">The Stand</li>
+				<li data-number="9">Dies the Fire</li>
+				<li data-number="10">The Lost King</li>
+			</ol>
+		</div>
+<script>
+        const bookList = document.getElementById('bookList');
+        const books = Array.from(bookList.getElementsByTagName('li'));
+
+        function sortAscending() {
+            books.sort((a, b) => parseInt(a.getAttribute('data-number')) - parseInt(b.getAttribute('data-number')));
+            books.forEach(book => bookList.appendChild(book));
+
+        }
+
+        function sortDescending() {
+            books.sort((a, b) => parseInt(b.getAttribute('data-number')) - parseInt(a.getAttribute('data-number') - 1));
+            books.forEach(book => bookList.appendChild(book));
+
+        }
+
+    </script>
+
+		<div class="side-by-side-right">
+			<h3>5 Things I’ve Learned Since the Course Started</h3>
+			 <ol>
+				<li>HTML Tags</li>
+				<li>List</li>
+				<li>Linking</li>
+				<li>Boxes</li>
+				<li>Layout</li>
+			 </ol>
+		</div>
+		<div class="last-div">
+			<a class="back-link" href="../index.html"> back to Landing Page</a>
+		</div>
+	</div>
+  </body>
+</html>

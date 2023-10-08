@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Cesar Estevez-Peralta">
+    <meta name="description" content="Module 10.3 Assignment">
+    <meta name="keywords" content="CSD 340, HTML, CSS, 10.3 Assignment">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+<script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div>
+      <a href="#" onclick="displayImage('cave_01.jpg');">
+        <img border="0" name="cave" src="cave_02.jpg">
+      </a>
+    </div>
+    <br/>
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+      Click on the image to change.
+      <br/><br/>
+    </div>
+    <div>
+      <a href="#" onclick="displayImage('moon_01.jpg');">
+        <img border="0" name="moon" src="moon_02.jpg">
+      </a>
+    </div>
+    <br/>
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+      Click on the image to change.
+    </div>
+    <br/>
+    <div>
+      <img id="mainImage" src="cave_02.jpg" alt="Large Image" class="mainImage" style="width: 300px; height: 200px;">
+    </div>
+</body>
+</html>

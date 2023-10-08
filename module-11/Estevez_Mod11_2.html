@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Cesar Estevez-Peralta">
+    <meta name="description" content="Module 11.2 Assignment">
+    <meta name="keywords" content="CSD 340, HTML, CSS, 11.2 Assignment">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+</head>
+<body>
+ <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This is an interactive To Do List. Type in your first item in the text book, then click Add. Click the Display button to
+    see current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.</p>
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <br/><br/>
+    <div
+       id="displayArea">
+    </div>
+
+    <script>
+        var entries = [];
+
+        function addEntry() {
+            var inputElement = document.getElementById("inputText");
+            var text = inputElement.value;
+            if (text.trim() !== "") {
+                entries.push(text);
+                alert("'" + text + "' was added at position " + entries.length);
+                inputElement.value = "";
+            }
+        }
+
+        function deleteLastEntry() {
+            if (entries.length > 0) {
+                var deletedText = entries.pop();
+                alert("Deleted: '" + deletedText + "'");
+            } else {
+                alert("Array is empty, nothing to delete.");
+            }
+        }
+
+        function displayEntries() {
+            var displayText = "";
+            for (var i = 0; i < entries.length; i++) {
+                displayText += (i + 1) + '. ' + entries[i] + '<br/>';
+            }
+           var displayArea = document.getElementById("displayArea");
+            displayArea.innerHTML = "Array Contents:<br>" + displayText;
+            if (displayText === "") {
+                displayArea.innerHTML = "Array is empty, nothing to display.";
+
+            }
+        }
+    </script>
+</body>
+</html>
